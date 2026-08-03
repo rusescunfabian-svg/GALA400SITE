@@ -44,37 +44,12 @@ const GTAG_BLOCK = `<script>
       'analytics_storage':'denied',
       'wait_for_update':500
     });
-    if(location.hash==='#google-wcc-debug'){
-      gtag('consent','update',{
-        'ad_storage':'granted',
-        'ad_user_data':'granted',
-        'ad_personalization':'granted',
-        'analytics_storage':'granted'
-      });
-    }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18106797178"></script>
   <script>
     gtag('js',new Date());
     gtag('config','AW-18106797178',{'conversion_linker':true});
     gtag('config','G-TLQ5WCBTJK',{'anonymize_ip':true});
-    window.gala400ApplyCallFwd=function(){
-      gtag('config','AW-18106797178/BHIeCLvLzdIcEPqY_7lD',{
-        'phone_conversion_number':'349 420 8551',
-        'phone_conversion_callback':function(formatted_number,mobile_number){
-          document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
-            var href=(a.getAttribute('href')||'').replace(/\\s+/g,'');
-            if(href.indexOf('3494208551')===-1 && href.indexOf('+393494208551')===-1 && href.indexOf('393494208551')===-1) return;
-            a.setAttribute('href','tel:'+mobile_number);
-            if(/349[\\s.\\-]*420[\\s.\\-]*8551/.test(a.textContent)){
-              a.textContent=a.textContent.replace(/349[\\s.\\-]*420[\\s.\\-]*8551/g,formatted_number);
-            }
-          });
-        }
-      });
-    };
-    window._googWcmGet=window._googWcmGet||function(el){return el;};
-    if(location.hash==='#google-wcc-debug'){ gala400ApplyCallFwd(); }
   </script>`;
 
 const COOKIE_CONSENT_BODY = `  <script defer src="${COOKIE_JS_URL}"></script>`;

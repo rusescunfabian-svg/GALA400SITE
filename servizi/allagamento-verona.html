@@ -502,39 +502,12 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
       'analytics_storage':'denied',
       'wait_for_update':500
     });
-    /* WCC debug needs ads consent before gtag.js boots */
-    if(location.hash==='#google-wcc-debug'){
-      gtag('consent','update',{
-        'ad_storage':'granted',
-        'ad_user_data':'granted',
-        'ad_personalization':'granted',
-        'analytics_storage':'granted'
-      });
-    }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18106797178"></script>
   <script>
     gtag('js',new Date());
     gtag('config','AW-18106797178',{'conversion_linker':true});
     gtag('config','G-TLQ5WCBTJK',{'anonymize_ip':true});
-    window.gala400ApplyCallFwd=function(){
-      gtag('config','AW-18106797178/BHIeCLvLzdIcEPqY_7lD',{
-        'phone_conversion_number':'349 420 8551',
-        'phone_conversion_callback':function(formatted_number,mobile_number){
-          document.querySelectorAll('a[href^="tel:"]').forEach(function(a){
-            var href=(a.getAttribute('href')||'').replace(/\s+/g,'');
-            if(href.indexOf('3494208551')===-1 && href.indexOf('+393494208551')===-1 && href.indexOf('393494208551')===-1) return;
-            a.setAttribute('href','tel:'+mobile_number);
-            if(/349[\s.\-]*420[\s.\-]*8551/.test(a.textContent)){
-              a.textContent=a.textContent.replace(/349[\s.\-]*420[\s.\-]*8551/g,formatted_number);
-            }
-          });
-        }
-      });
-    };
-    window._googWcmGet=window._googWcmGet||function(el){return el;};
-    /* Apply immediately for debug; otherwise wait for ads cookie consent */
-    if(location.hash==='#google-wcc-debug'){ gala400ApplyCallFwd(); }
   </script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Plumber", "LocalBusiness"], "@id": "https://gala400.it/#business", "name": "Gala 400 — Idraulico Verona", "legalName": "Gala 400 Srls", "taxID": "05180000233", "telephone": "+393494208551", "url": "https://gala400.it", "sameAs": ["https://share.google/IhkhBfXpcJHccJPsL"], "priceRange": "€€", "address": {"@type": "PostalAddress", "addressLocality": "Verona", "addressRegion": "VR", "postalCode": "37100", "addressCountry": "IT"}, "geo": {"@type": "GeoCoordinates", "latitude": 45.4384, "longitude": 10.9916}, "areaServed": [{"@type": "City", "name": "Verona"}, {"@type": "AdministrativeArea", "name": "Provincia di Verona"}], "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}}, {"@type": "Service", "name": "Allagamento a Verona — Intervento Immediato", "serviceType": "Allagamento a Verona — Intervento Immediato", "provider": {"@id": "https://gala400.it/#business"}, "areaServed": {"@type": "City", "name": "Verona"}, "url": "https://gala400.it/servizi/allagamento-verona.html"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item":"https://gala400.it/"}, {"@type": "ListItem", "position": 2, "name": "Servizi", "item": "https://gala400.it/index.html#servizi"}, {"@type": "ListItem", "position": 3, "name": "Allagamento a Verona — Intervento Immediato", "item": "https://gala400.it/servizi/allagamento-verona.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cosa faccio subito, prima che arrivi?", "acceptedAnswer": {"@type": "Answer", "text": "Se puoi farlo in sicurezza, chiudi il rubinetto generale dell'acqua e stacca la corrente nella zona allagata. Poi chiamami."}}, {"@type": "Question", "name": "Intervieni anche di notte per un allagamento?", "acceptedAnswer": {"@type": "Answer", "text": "Sì, le emergenze di questo tipo hanno priorità assoluta, a qualsiasi ora."}}, {"@type": "Question", "name": "Fai anche un documento per l'assicurazione?", "acceptedAnswer": {"@type": "Answer", "text": "Posso fornirti un resoconto tecnico dell'intervento da allegare alla tua pratica assicurativa."}}, {"@type": "Question", "name": "Un allagamento può danneggiare l'impianto elettrico?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Se puoi farlo in sicurezza, stacca la corrente nella zona colpita prima ancora di chiamarmi."}}]}]}</script>
       <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -548,7 +521,7 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
     <li><a href="/servizi/">Tutti i servizi</a></li>
     <li><a href="/quartieri/">Zone</a></li>
     <li><a href="/marche/">Caldaie</a></li>
-    <li><a href="tel:+393494208551" class="nav2-cta" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a></li>
+    <li><a href="tel:+393494208551" class="nav2-cta">349 420 8551</a></li>
   </ul>
   <button class="hbg2" id="hbg2" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -557,7 +530,7 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
   <a href="/servizi/">Tutti i servizi</a>
   <a href="/quartieri/">Zone</a>
   <a href="/marche/">Caldaie</a>
-  <a href="tel:+393494208551" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a>
+  <a href="tel:+393494208551">349 420 8551</a>
 </div>
 <main>
 <section class="hero2">
@@ -569,7 +542,7 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
       <h1 class="hero2-h1">Allagamento a Verona — Intervento Immediato</h1>
       <p class="hero2-tagline">Allagamento in casa, cantina o box a Verona? Intervento immediato per fermare l'acqua e limitare il danno. Chiama 349 420 8551.</p>
       <div class="hero2-btns">
-        <a href="tel:+393494208551" class="hbtn hbtn-solid" data-cta="hero2-call" onclick="_googWcmGet(this, '349 420 8551')">
+        <a href="tel:+393494208551" class="hbtn hbtn-solid" data-cta="hero2-call">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.41 2 2 0 013.6 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.96-.96a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           349 420 8551
         </a>
@@ -578,7 +551,7 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
     </div>
     <div class="hero2-contact">
       <p class="hc-label">Emergenza idraulica</p>
-      <a href="tel:+393494208551" class="hc-phone" data-cta="hero2-contact-call" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a>
+      <a href="tel:+393494208551" class="hc-phone" data-cta="hero2-contact-call">349 420 8551</a>
       <p class="hc-meta">Gala 400 Srls · P.IVA 05180000233 · H24</p>
       <a href="https://wa.me/393494208551?text=Richiesta%20idraulico%20Allagamento%20a%20Verona%20%E2%80%94%20Intervento%20Immediato%20Verona" class="hc-wa" rel="noopener" target="_blank" data-cta="hero2-wa">
         <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2z"/></svg>
@@ -627,15 +600,15 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
     <div class="lbl2 ct2-lbl">Contatti</div>
     <h2 class="ct2-h">Chiamami <em>ora</em>.</h2>
     <p class="ct2-sub">Per urgenze il telefono è sempre la via più rapida. Per richieste non urgenti, usa il modulo qui a fianco.</p>
-    <div class="ct2-row"><div class="ct2-rlbl">Telefono</div><a class="ct2-rval phone" href="tel:+393494208551" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a></div>
+    <div class="ct2-row"><div class="ct2-rlbl">Telefono</div><a class="ct2-rval phone" href="tel:+393494208551">349 420 8551</a></div>
     <div class="ct2-row"><div class="ct2-rlbl">Zona di intervento</div><span class="ct2-rval" style="font-size:1.1rem">Verona e provincia</span></div>
     <div class="ct2-btns">
-      <a href="tel:+393494208551" class="btn-w2" onclick="_googWcmGet(this, '349 420 8551')">Chiama ora</a>
+      <a href="tel:+393494208551" class="btn-w2">Chiama ora</a>
       <a href="https://wa.me/393494208551?text=Ciao%2C%20ho%20un%20problema%20idraulico%20urgente%20a%20Verona%2C%20potete%20venire%3F" class="btn-wa2" rel="noopener" target="_blank">WhatsApp</a>
     </div>
   </div>
   <div class="ct2-r"><p class="form-title">Richiamata immediata</p>
-    <p class="form-sub">Per urgenze chiama subito <a href="tel:+393494208551" class="link-accent link-tel" data-cta="richiamata-tel" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a>. Il form sotto è per richiamata non urgente.</p>
+    <p class="form-sub">Per urgenze chiama subito <a href="tel:+393494208551" class="link-accent link-tel" data-cta="richiamata-tel">349 420 8551</a>. Il form sotto è per richiamata non urgente.</p>
     <form name="richiamata" method="POST" data-netlify="true" data-ads-track="richiamata" netlify-honeypot="bot-field" action="/?ok=1#richiamata" class="callback-form">
       <input type="hidden" name="form-name" value="richiamata">
       <p class="sr-only"><label>Non compilare <input name="bot-field"></label></p>
@@ -648,7 +621,7 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
         <label for="privacy-cb">Ho letto la <a href="../privacy-policy.html" class="link-accent">Privacy Policy</a> e acconsento al trattamento dei miei dati per essere ricontattato.</label>
       </p>
       <button type="submit" class="btn-callback" data-cta="richiamata-invio">Richiedi richiamata</button>
-      <p id="richiamata-ok" class="form-ok" hidden>Grazie. Per urgenze chiama <a href="tel:+393494208551" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a>.</p>
+      <p id="richiamata-ok" class="form-ok" hidden>Grazie. Per urgenze chiama <a href="tel:+393494208551">349 420 8551</a>.</p>
     </form></div>
 </section>
 </main>
@@ -679,7 +652,7 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
     <div class="foot-pro-col">
       <h4>Contatti</h4>
       <ul class="foot-pro-contact">
-        <li><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a class="phone-link" href="tel:+393494208551" onclick="_googWcmGet(this, '349 420 8551')">349 420 8551</a></li>
+        <li><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a class="phone-link" href="tel:+393494208551">349 420 8551</a></li>
         <li><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.5A10 10 0 1012 2z"/></svg><a class="wa-link" href="https://wa.me/393494208551?text=Richiesta%20idraulico%20urgente%20Verona" rel="noopener" target="_blank">WhatsApp</a></li>
         <li><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a5.6 5.6 0 013.9 1.55l-1.6 1.6A3.3 3.3 0 0012 7.3 4.15 4.15 0 007.85 11.5 4.15 4.15 0 0012 15.65a3.85 3.85 0 004-3H12v-2.2h6.6c.08.4.12.8.12 1.3 0 4-2.7 6.9-6.7 6.9a6.9 6.9 0 010-13.8z"/></svg><a href="https://share.google/IhkhBfXpcJHccJPsL" rel="noopener" target="_blank">Google Business</a></li>
         <li><svg class="ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2s7 8.5 7 13a7 7 0 11-14 0c0-4.5 7-13 7-13z"/></svg>Verona e provincia</li>
@@ -696,9 +669,9 @@ footer.foot-pro{background:var(--ink2);padding:3rem 1.25rem 1.5rem;color:rgba(25
     </div>
   </div>
 </footer>
-<a href="tel:+393494208551" class="float-call-pill" data-cta="float-call" onclick="_googWcmGet(this, '349 420 8551')"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Chiama</a>
+<a href="tel:+393494208551" class="float-call-pill" data-cta="float-call"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Chiama</a>
 <div class="sticky-mobile" role="complementary" aria-label="Chiama ora">
-  <a href="tel:+393494208551" class="sticky-call btn-pulse" data-cta="sticky-call" onclick="_googWcmGet(this, '349 420 8551')">
+  <a href="tel:+393494208551" class="sticky-call btn-pulse" data-cta="sticky-call">
     <span class="sticky-call-label">Emergenza idraulica Verona</span>
     <span class="sticky-call-num">349 420 8551</span>
   </a>
@@ -721,7 +694,6 @@ function gala400UpdateConsent(analytics, ads){
     'ad_user_data': ads ? 'granted' : 'denied',
     'ad_personalization': ads ? 'granted' : 'denied'
   });
-  if(ads && typeof gala400ApplyCallFwd==='function') gala400ApplyCallFwd();
 }
 function gala400LoadCookieCss(cb){
   if(document.querySelector('link[data-cc-css]')){cb();return;}
